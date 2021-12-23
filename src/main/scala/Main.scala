@@ -2,8 +2,8 @@ package pl.tw.lab6
 
 object Main {
   def main(args: Array[String]): Unit = {
-    val matrix = Matrix.makeMatrixFromFile("resources/input_data.txt")
+    val matrix = Matrix.makeMatrixFromFile(args(0))
     GaussianElemination.solve(matrix)
-    Matrix.print(matrix)
+    Matrix.saveMatrixToFile(matrix, args(1))
   }
 }
