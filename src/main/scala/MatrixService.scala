@@ -2,7 +2,7 @@ package pl.tw.lab6
 
 import java.io.{File, PrintWriter}
 
-object Matrix {
+object MatrixService {
   private def readFileLines(filePath: String): List[String] = scala.io.Source.fromFile(filePath).getLines.toList
 
   private def makeMatrixFromFileLines(fileLines: List[String]): Array[Array[Double]] = {
