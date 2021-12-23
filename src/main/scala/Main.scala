@@ -5,5 +5,6 @@ object Main {
     val matrix = Matrix.makeMatrixFromFile(args(0))
     GaussianElemination.solve(matrix)
     Matrix.saveMatrixToFile(matrix, args(1))
+    ActionsToGraph.writeGraphForMatrixToDotFormatAndMakeSvgGraph(matrix.length, args(2))
   }
 }
